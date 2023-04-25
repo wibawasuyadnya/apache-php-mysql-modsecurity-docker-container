@@ -63,8 +63,6 @@ services:
             - mysql_img
         
         networks:
-            private_net:
-                ipv4_address: ${PHPMYADMIN_PRIVATE_IP}
             public_net:
                 ipv4_address: ${PHPMYADMIN_IP}
         
@@ -74,7 +72,6 @@ services:
             PMA_PASSWORD: ${MYSQL_PASSWORD}
             MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
             PMA_PORT: 3306
-            PMA_ARBITRARY: 1
 
         restart: always
         
